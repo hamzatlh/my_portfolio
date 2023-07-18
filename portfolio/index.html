@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza Talhaouia's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d9715a0d67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="imgs/Logo Maker_ Create Stunning Logos Instantly (2023).png" classe="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">projects</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <div class="text-1">
+                <h1>Hi, I'm <span>Hamza</span>;</h1>
+                <p> fullstack web developper </p>
+            </div>
+        </div>
+    </div>
+    <!-- fin header -->
+    <!-- start about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-1">
+                    <img src="imgs/back.jpg" alt="me">
+                </div>
+                <div class="about-2">
+                    <h1 class="text-about">About Me</h1>
+                    <p>
+                        Hello! I'm Hamza Talhaouia! It's a pleasure to meet you. I'm a Fullstack web developer with a strong focus on crafting exceptional web experiences. Ever since I first laid my hands on a computer, Coding have been my passions. I take great delight in creating websites that are not only beautifully designed but also intuitive and highly functional. Let's build some amazing web projects together!
+                    </p>
+                    <div class="tab-titels">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiences')">Experiences</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developement</span><br> App Developement </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiences">
+                        <ul>
+                            <li><span>2020-current</span><br> Freelance  </li>
+                            <li><span>2016-2020</span><br> Military Service (Navy military)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-current</span><br> 1337 Student (42 Network) </li>
+                            <li><span>2020-2022</span><br> TS Developement</li>
+                            <li><span>2016-2020</span><br> CIMR (NAVY center) </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin about -->
+    <!-- start services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="text-about">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <span>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Developement</h2>
+                    </span>
+                    <p>HTML, CSS and JS <br>Responsive websites</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <span>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>UI/UX Design</h2>
+                    </span>
+                    <p>Landing pages, prototyping<br>Mobile/Web app Design</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin services -->
+    <!-- my projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="text-about">My Projects</h1>
+            <div class="projects-list">
+                <div class="work">
+                    <img src="imgs/Netflix - Watch Tv Shows Online, Watch Movies Online.png">
+                    <div class="layer">
+                        <h3>Netflix-inspired home page</h3>
+                        <p>
+                            The project aims to recreate the visual design and layout of the Netflix home page, providing a starting point for creating similar interfaces or learning web development techniques.
+                        </p>
+                        <a href="https://github.com/hamzatlh/Netflix-home-page"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="imgs/Sign-in_Sign-up form.png">
+                    <div class="layer">
+                        <h3>Sign-in_Sign-up</h3>
+                        <p>sign-up form responsive (adaptable to different screen sizes) and interactive</p>
+                        <a href="https://github.com/hamzatlh/Sign-in-page"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="imgs/nickdotht_minishell_ As beautiful as a shell.png">
+                    <div class="layer">
+                        <h3>Minishell</h3>
+                        <p>Minishell is the second project of the Unix branch at 42. It's a minimum viable version of a real shell. The main goal is to have a good understanding of process creation and synchronisation using the C programmming language.
+                        </p>
+                        <a href="https://github.com/42-teamprojects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
