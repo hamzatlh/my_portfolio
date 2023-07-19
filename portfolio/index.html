@@ -8,17 +8,21 @@
     <script src="https://kit.fontawesome.com/d9715a0d67.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div class="container">
             <nav>
-                <img src="imgs/Logo Maker_ Create Stunning Logos Instantly (2023).png" classe="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">contact</a></li>
+                <a href="#header" class="logo">
+                    <img src="imgs/Logo Maker_ Create Stunning Logos Instantly (2023).png">
+                </a>
+                    <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="text-1">
                 <h1>Hi, I'm <span>Hamza</span>;</h1>
@@ -32,7 +36,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-1">
-                    <img src="imgs/back.jpg" alt="me">
+                    <img src="imgs/me.jpg" alt="me">
                 </div>
                 <div class="about-2">
                     <h1 class="text-about">About Me</h1>
@@ -124,10 +128,60 @@
                         <a href="https://github.com/42-teamprojects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-
             </div>
+           <a href="https://github.com/hamzatlh" class="btn">See More</a> 
+        </div>
+    </div>
+    <!-- fin projects -->
+    <!-- start contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="text-about">Contact Me</h1>
+                    <P><i class="fa-solid fa-envelope"></i>htlhaouia@gmail.com</P>
+                    <p><i class="fa-solid fa-phone"></i>+212717632533</p>
+                    <div class="social-icons">
+                        <a href="https://discord.com/invite/hamzat_tlh"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/talhaouia-hamza/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/hamza_tlh/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/hamzatlh"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="imgs/cv-Hamza TALHAOUIA  (7.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="10" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Made with <i class="fa-solid fa-heart"></i> by Hamza Talhaouia</p>
         </div>
     </div>
     <script src="main.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTKHXKXLkkuuJQiGmgSkDu9ekY4CM4Syqy-vvQ9etgygEubRQPW65VgApSOUSoWAn5/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent succefully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+                })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
