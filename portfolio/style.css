@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'verdana' , sans-serif;
     box-sizing: border-box;
 }
 
@@ -10,19 +10,94 @@ html{
 }
   
 body{
-    background: #080808;
+    background: #292727;
     color: #fff;
 }
 
 #header{
     width: 100%;
-    height: 100vh; 
-}
-.container{
-    padding: 10px 10%;
-    background-color: #080808;
-    width: auto;
+    height: 100vh;
+    background-image: url(imgs/back.jpg);
+    background-size: auto;
+    margin-top: -10%;
 
+}
+
+header nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+.container{
+    padding: 0;
+    position: static;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    top: 0;
+}
+  
+.social-icons-1{
+    margin-top: 0px;
+    text-align: center;
+    align-items: center;
+}
+.social-icons-1 a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: traansform 0.5s;
+}
+.social-icons-1 a:hover{
+    color: rgb(31, 0, 168);
+    transform: translateY(-5px);
+}
+
+.text {
+    font-size: larger;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.37);
+    padding: 250px;
+    justify-content: center;
+    height: 10%;
+    margin-top: 160px;
+    margin-bottom: -190px;
+}
+.text h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    position: relative;
+    cursor: auto; 
+}
+  
+.text h1::after {
+    content: "";
+    width: 0%;
+    height: 5px;
+    background: rgba(67, 0, 192, 0.651);
+    position: absolute;
+    bottom: 3px;
+    left: 22%;
+    transition: width 0.3s ease-in-out;
+}
+  
+.text h1:hover::after {
+    width: 56%;
+}
+  
+
+h1{
+    font-size: 1em;
+    margin: 0.67em 0;
+}
+
+.a{
+    color: #034903;
 }
 
 nav{
@@ -30,6 +105,8 @@ nav{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
 }
 
 .logo{
@@ -40,15 +117,11 @@ nav{
     width: 60px;
 }
 
-/* img{
-    width: 100px;
-    height: 100px;
-} */
-
 nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    padding: 10px 20px;
 }
 
 nav ul li a{
@@ -92,31 +165,35 @@ nav ul li a:hover::after{
 
 /* start about */
 #about{
-    padding: 80px 0;
-    color: grey;
-
+    padding: 40px 0;
+    color: rgb(250, 244, 244);
+    width: 90%;
 }
+
 .row{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
-.about-1{
-    flex-basis: 33%;
-}
+
 .about-1 img{
     width: 100%;
     border-radius: 15px;
     height: 100%;
 
 }
+
 .about-2{
-    flex-basis: 30%;
+    flex-basis: 70%;
+    margin-left: 10%;
 }
 
 .text-about{
     font-size: 50px;
     color: wheat;
+    text-decoration: underline;
+    text-align: center;
+
 }
 .tab-titels{
     display: flex;
@@ -164,6 +241,7 @@ nav ul li a:hover::after{
 
 #services{
     padding: 30px 0;
+    background-color: #3a3d3a;
     
 }
 .services-list{
@@ -174,7 +252,7 @@ nav ul li a:hover::after{
 
 }
 .services-list div{
-    background: grey;
+    background: rgb(0, 19, 70);
     padding: 40px;
     font-size: 13px;
     font-weight: 200;
@@ -205,7 +283,7 @@ nav ul li a:hover::after{
     color: red;
 }
 .services-list div:hover{
-    background: green;
+    background: rgb(1, 65, 1);
     transform: rotateZ(-5deg);
 }
 
@@ -213,6 +291,7 @@ nav ul li a:hover::after{
 
 #projects{
     padding: 50px 0;
+    background-color: #3a3d3a;
 
 }
 
@@ -241,7 +320,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(black, rgb(15, 165, 10));
+    background: linear-gradient(black, rgb(4, 77, 2));
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -263,7 +342,7 @@ nav ul li a:hover::after{
 }
 .layer a{
     margin-top: 20px;
-    color: blueviolet;
+    color: rgb(168, 189, 49);
     font-size: 20px;
     line-height: 50px;
     background-color: #fff;
@@ -282,24 +361,49 @@ nav ul li a:hover::after{
     height: 100%;
     cursor: pointer;
 }
+
 .btn{
     display: flex;
     margin: 50px auto;
     width: fit-content;
     border: 1px;
     padding: 14px 50px;
-    border-radius: 5px;
-    color: antiquewhite;
+    border-radius: 8px;
+    color: rgb(224, 228, 226);
     transition: 0.5s;
+    background-color: blue;
+    transition: 0.3s;
 }
 
 .btn:hover{
-    background-color: blue;
     cursor: pointer;
+    box-shadow: 0px 3px 14px white;
 }
+
+.btn3{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    border: 1px;
+    padding: 14px 50px;
+    border-radius: 8px;
+    color: rgb(224, 228, 226);
+    transition: 0.5s;
+    background-color: blue;
+    transition: 0.3s;
+}
+
+.btn3:hover{
+    cursor: pointer;
+    box-shadow: 0px 3px 14px white;
+}
+
 
 /* contact */
 
+#contact{
+    background-color: #373837;
+}
 .contact-left{
     flex-basis: 30%;
 }
